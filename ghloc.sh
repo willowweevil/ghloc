@@ -12,6 +12,6 @@ gh repo list | while read -r repo _; do gh repo clone "${repo}" "${repo}"; done
 
 cloc . --include-lang=GDScript,Go,Lua,Python,"Jupyter Notebook","Bourne Shell","DOS Batch" \
 	--by-percent cmb \
-	--hide-rate | ./converter
+	--hide-rate | tee ./converter
 
 rm -rf $GITHUB_ACCOUNT/
